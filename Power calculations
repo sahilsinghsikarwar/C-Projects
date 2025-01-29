@@ -1,0 +1,27 @@
+//Write a recursive function to calculate x raised to the power of n (i.e., (x^n)).
+#include <stdio.h>
+#include<math.h>
+int power(int x,int n){
+    if(n==0){
+        return 1;
+    }
+    else if(n<0){
+        return 0;
+    }
+    else{
+        return x*power(x,n-1);
+
+    }
+
+}
+int main(){
+    int final ,n,x;
+    
+    printf("Enter the number :");
+    scanf("%d",&x);
+    printf(" Enter the power :");
+    scanf("%d",&n);
+    final= power(x,n);
+    printf("%d",final);
+    return 0;
+}
