@@ -1,0 +1,35 @@
+#include <stdio.h>
+int factorial(int number){
+    if(number==0 || number==1){
+        return 1;
+    }
+   
+     
+    return number* factorial(number-1);
+}
+
+int main(){
+    // factortial 
+    int n,range,calculate;
+    printf("how many no. factorial you want to konw : ");
+    scanf("%d",&range);
+    int number[range];
+    for(int i=0;i<range;i++){
+        printf(" Enter your %d number : ",i+1);
+        scanf("%d",&number[i]);
+    }
+  
+    for (int i = 0; i <range; i++)
+    {
+        if(number[i] <0){
+            printf("your %d no. is invalid, please enter positive no. \n",number[i]);
+        }
+        else{
+       calculate= factorial(number[i]);
+       printf(" factorial of %d is %d\n",number[i],calculate );
+}
+    }
+     
+   
+    return 0;
+}
