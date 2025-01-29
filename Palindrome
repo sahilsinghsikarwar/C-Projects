@@ -1,0 +1,23 @@
+#include <stdio.h>
+void palindrome(int number){
+      if( number %11==0 ){
+        printf(" this is palindrome no.");
+      }
+       
+      else {
+        printf(" this is not palindrome ");
+      }
+}
+int main(){
+    int range,number;
+    printf(" how mauch no. u want to check this is palindrome or not :");
+   scanf("%d",&range);
+   for(int i=1; i<=range ; i++ ){
+    printf(" enter the number %d is ",i);
+    scanf("%d",&number);
+    palindrome(number);
+    
+   }
+
+    return 0;
+}
